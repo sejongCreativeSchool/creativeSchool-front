@@ -4,3 +4,4 @@
 ### Web Front
 
 #### [Week 1 :: React - Redux를 이용한 학점 계산기 만들기](./week1/week1.md)
+#### [Week 2 :: Redux Thunk를 이용한 포켓몬 도감 만들기](./week2/week2.md)
