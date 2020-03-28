@@ -1,7 +1,11 @@
 # 창의학기제 웹 프론트엔드(2주차)
 
 ### 학습내용
--  비동기 처리란 무엇인가?
+##### 비동기 처리란 무엇인가?
+
+[자바스크립트 비동기 처리와 콜백 함수](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)   
+[자바스크립트 Promise 쉽게 이해하기](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)   
+[자바스크립트 async와 await](https://joshua1988.github.io/web-development/javascript/js-async-await/)
 ##### Redux-Middleware란 무엇인가 ?    
 - 액션이 디스패치(dispatch) 되어서 리듀서에서 이를 처리하기전에 사전에 지정된 작업들을 설정한다.   
 - 미들웨어는 액션과 리듀서 사이의 중간자라고 이해하시면 된다.   
