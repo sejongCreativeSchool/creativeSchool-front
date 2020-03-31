@@ -77,7 +77,7 @@ export default KakaoMap;
 이런식으로 해주니 Kakao Map이 떴다.   
 추후, JavaScript Window 객체에 대해 추가적인 공부를 진행할 예정이다.
 
-##### Kakao Map API를 이용한 세종대 근처 맛집 WEB APP
+### Kakao Map API를 이용한 세종대 근처 맛집 WEB APP
 
 <img width="1330" alt="스크린샷 2020-03-31 오후 8 36 44" src="https://user-images.githubusercontent.com/52201658/78022334-b99fda00-738f-11ea-9ec4-1762e4443d1e.png">
 
