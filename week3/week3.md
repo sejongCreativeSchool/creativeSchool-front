@@ -82,14 +82,14 @@ export default KakaoMap;
 <img width="1330" alt="스크린샷 2020-03-31 오후 8 36 44" src="https://user-images.githubusercontent.com/52201658/78022334-b99fda00-738f-11ea-9ec4-1762e4443d1e.png">
 
 
-### Purpose
+##### Purpose
 React에서 외부 Script 형식의 API를 사용하는 것을 경험하기 위해 프로젝트를 시작했습니다.
 
-### TechSet
+##### TechSet
 Language: Javascript ES6, JSX   
 Library: React, Redux, Styled-Components, Kakao Map API 
 
-### Comments
+##### Comments
 
-### Study Result
+##### Study Result
 
