@@ -1,86 +1,81 @@
-# 창의학기제 웹 프론트엔드(2주차)
+# 창의학기제 웹 프론트엔드(3주차)
 
 ### 학습내용
-##### 비동기 처리란 무엇인가?
+##### 어떤 Map API를 사용할 것인가?
+- T Map API : 전에 안드로이드 개발할 때 사용해봐서 익숙하다.   
+- Kakao Map API : 써보지 않았지만 무료 검색 횟수가 많이 주어지고 Docs가 상세하다.   
 
-[자바스크립트 비동기 처리와 콜백 함수](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)   
-[자바스크립트 Promise 쉽게 이해하기](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)   
-[자바스크립트 async와 await](https://joshua1988.github.io/web-development/javascript/js-async-await/)
-##### Redux-Middleware란 무엇인가 ?    
-- 액션이 디스패치(dispatch) 되어서 리듀서에서 이를 처리하기전에 사전에 지정된 작업들을 설정한다.   
-- 미들웨어는 액션과 리듀서 사이의 중간자라고 이해하시면 된다.   
-- 리듀서가 액션을 처리하기전에, 미들웨어가 할 수있는 작업들은 여러가지가 있다.   
-- 단순히 전달받은 액션을 콘솔에 기록을 할 수도 있고, 전달받은 액션에 기반하여 액션을 아예 취소시켜버리거나, 다른 종류의 액션들을 추가적으로 디스패치 할 수도 있다.  
+결론 : Kakao Map API를 사용하기로 결정함
 
-##### Thunk란 무엇인가?
-- Thunk란, 특정 작업을 나중에 하도록 미루기 위해서 함수형태로 감싼것을 칭한다.
-- 예를 들면, 1 + 1 을 지금 당장 하고싶다면 이런 방식으로 진행한다.
-```
-const x = 1 + 2;
-```
-- 이 코드가 실행되면 1 + 2 의 연산이 바로 진행된다.
-- 하지만 다음과 같이 함수 형태로 감싸면,
-```
-const foo = () => 1 + 2;
-```
-- 1 + 2 의 연산이 코드가 실행 될 때 바로 이뤄지지 않고 나중에 foo() 가 호출 되어야만 이뤄진다.
+##### Kakao Map API 사용방법
+[Kakao Map API 사용 가이드](http://apis.map.kakao.com/web/guide/)를 보고 따라서 진행하였다.   
 
-##### Redux-Thunk 는 정확히 뭘 하는 미들웨어일까?
-- 가장 간단히 설명하자면, 이 미들웨어는 객체 대신 함수를 생성하는 액션 생성함수를 작성 할 수 있게 한다.
-- 리덕스에서는 기본적으로는 액션 “객체”를 디스패치한다. 
-- 일반 액션 생성자는, 다음과 같이 파라미터를 가지고 액션 객체를 생성하는 작업만 한다.
-```
-const actionCreator = (payload) => ({action: 'ACTION', payload});
-```
-- 만약에 특정 액션이 몇초뒤에 실행되게 하거나, 현재 상태에 따라 아예 액션이 무시되게 하려면, 일반 액션 생성자로는 할 수가 없다.
-- 하지만, redux-thunk 는 이를 가능케한다.
+##### 발생한 문제
 
-- Redux-Thunk 는 일반 액션 생성자에 날개를 달아준다.
-- 보통의 액션생성자는 그냥 하나의 액션객체를 생성 할 뿐이다.
-- Redux-Thunk 를 통해 만든 액션 생성자는 그 내부에서 여러가지 작업을 할 수 있다.
-- 이 곳에서 네트워크 요청을 해도 무방하다.
-- 또한, 이 안에서 액션을 여러번 디스패치 할 수도 있다.
+- Kakao Map API는 Script 태그 형태로 불러와서 사용하는데, React 컴포넌트에서 사용하는 방법을 몰랐다.   
+- 아래는 Kakao Map API Docs에서 제공하는 맵 띄우는 예시 코드이다.
+```
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Kakao 지도 시작하기</title>
+</head>
+<body>
+	<div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다."></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
 
-##### 어떻게 Redux - Thunk를 사용하는가 ?
-1. Redux Thunk 설치
+		var map = new kakao.maps.Map(container, options);
+	</script>
+</body>
+</html>
 ```
-$ yarn add redux-thunk
+이거를 React에 적용하는 방법을 몰라 크게 애를 먹었다.   
+내가 해결한 방법은 다음과 같다.   
+- 우선 public/index.html 의 head 태그의 자식 요소로 
+    ```
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다."></script>
+    ```
+    를 넣었다.
+- 이 후, Map을 보여주는 Component인 src/components/KakaoMap.js 를 만들고 다음과 같이 코드를 작성하였다.   
 ```
-2. 스토어를 생성할 때, 미들웨어를 적용
-```
-const store = createStore(modules, applyMiddleware(logger, ReduxThunk));
-```
-3. Thunk 생성함수 작성
-```
-export const getPost = (postId) => dispatch => {
-    // 먼저, 요청이 시작했다는것을 알립니다
-    dispatch({type: GET_POST_PENDING});
+import React, { useEffect, useRef } from "react";
+const { kakao } = window; // window에 존재하는 kakao를 비구조화 할당해준다.
 
-    // 요청을 시작합니다
-    // 여기서 만든 promise 를 return 해줘야, 나중에 컴포넌트에서 호출 할 때 getPost().then(...) 을 할 수 있습니다
-    return getPostAPI(postId).then(
-        (response) => {
-            // 요청이 성공했을경우, 서버 응답내용을 payload 로 설정하여 GET_POST_SUCCESS 액션을 디스패치합니다.
-            dispatch({
-                type: GET_POST_SUCCESS,
-                payload: response
-            })
-        }
-    ).catch(error => {
-        // 에러가 발생했을 경우, 에로 내용을 payload 로 설정하여 GET_POST_FAILURE 액션을 디스패치합니다.
-        dispatch({
-            type: GET_POST_FAILURE,
-            payload: error
-        });
-    })
+function KakaoMap() {
+  const mapContainer = useRef(); // id가 Map인 div태그의 DOM 을 직접 건드리기 위해 useRef Hooks를 사용하였다.
+  useEffect(() => {
+    kakao.maps.load(() => {
+      let el = document.getElementById("map");
+      let map = new kakao.maps.Map(el, {
+        center: new kakao.maps.LatLng(37.549503, 127.075174)
+      });
 
+      // 마커가 지도 위에 표시되도록 설정합니다
+      markers.map(marker => marker.setMap(map));
+    });
+  }, []);
+
+  return (
+    <div
+      id="map"
+      style={{
+        width: "700px",
+        height: "630px",
+        ref={mapContainer} // DOM을 직접 조작하기 위해 ref 속성을 추가해준다.
+    ></div>
+  );
 }
+export default KakaoMap;
+
 ```
 
-##### Redux- Thunk를 이용해 포켓몬 도감을 만들어보자.
 
-<img width="820" alt="스크린샷 2020-03-28 오후 7 08 14" src="https://user-images.githubusercontent.com/52201658/77820753-d8039c80-7127-11ea-8dbb-ffd4b092be3e.png">
-<img width="799" alt="스크린샷 2020-03-28 오후 7 12 10" src="https://user-images.githubusercontent.com/52201658/77820786-244edc80-7128-11ea-996e-ace44490de47.png">
 
 ### Purpose
 React의 비동기 처리를 위한 라이브러리 Redux-Middleware를 사용하고, 연습하기 위해 프로젝트를 시작했습니다.
