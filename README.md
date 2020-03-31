@@ -5,3 +5,4 @@
 
 #### [Week 1 :: React - Redux를 이용한 학점 계산기 만들기](./week1/week1.md)
 #### [Week 2 :: Redux Thunk를 이용한 포켓몬 도감 만들기](./week2/week2.md)
+#### [Week 3 :: Kakao Map API와 Reudx를 이용한 세종대 근처 맛집 리스트 만들기](./week3/week3.md)
