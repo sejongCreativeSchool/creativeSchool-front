@@ -11,7 +11,9 @@ HTML 태그를 선택하는 방법
 - 자식 선택자 ( 부모 > 자식 )   
 - nth - child ( n )    
    
-[CSS 선택자 연습 사이트](http://flukeout.github.io/)에서 연습했다.    
+[CSS 선택자 연습 사이트](http://flukeout.github.io/)에서 연습했다.  
+<img width="1328" alt="스크린샷 2020-04-11 오후 6 34 51" src="https://user-images.githubusercontent.com/52201658/79040406-30a46080-7c23-11ea-92f2-09b4b6ef0884.png">
+  
 
 ##### 박스 모델
 [박스 모델](https://github.com/baeharam/Must-Know-About-Frontend/blob/master/Notes/css/box-model.md)을 보고 공부하였다.   
