@@ -37,6 +37,8 @@ HTML 태그를 선택하는 방법
 
 [CSS Flex(Flexible Box) 완벽 가이드](https://heropy.blog/2018/11/24/css-flexible-box/)를 보고 공부   
 [Flex를 게임으로 배우는 사이트](https://flexboxfroggy.com/#ko)를 통해 실습   
+<img width="1762" alt="스크린샷 2020-04-11 오후 6 32 59" src="https://user-images.githubusercontent.com/52201658/79040372-ee7b1f00-7c22-11ea-997d-076ec85461aa.png">
+
 [Flexbox로 만들 수 있는 10가지 레이아웃](https://d2.naver.com/helloworld/8540176)을 통해 공부   
 
 
