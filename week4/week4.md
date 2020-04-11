@@ -49,7 +49,7 @@ HTML 태그를 선택하는 방법
 똑같이 쏘카 페이지를 클로닝 하면서 CSS를 다루는 능력을 향상시키고자 했다.
 
 ##### TechSet
-Language: HTML5, CSS, JavaScript ES6, JQuery
+Language: HTML5, CSS, JavaScript ES6, JQuery   
 Library: Owl Carousel(사용할 지 안할지 모름)
 
 ##### Comments
