@@ -1,0 +1,180 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+}
+
+#header {
+  height: 110px;
+  display: flex;
+  margin: 0 auto 0 auto;
+  width: 100%;
+}
+
+#logotext {
+  display: none;
+}
+#logoimg {
+  width: 159px;
+  height: 38px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20%;
+}
+.menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 20%;
+}
+
+.menulist {
+  display: flex;
+  width: 300px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menulist:nth-child(n) {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+}
+
+.section-service {
+  display: flex;
+  height: 724px;
+  padding: 100px 0 124px;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.carousel1img {
+  width: 100%;
+  max-width: 100%;
+  margin: -130px 0 0 0px;
+  opacity: 0.8;
+  transition: all linear 0.3s;
+}
+
+.item {
+  width: 100%;
+  height: 0%;
+}
+
+.section-service-text1 {
+  width: 403px;
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.section-service-text1-div {
+  margin-left: 20%;
+}
+
+.section-service-img-container {
+  display: flex;
+}
+
+.section-service-img-div {
+  max-width: 520px;
+}
+
+.fakeimg {
+  width: 520px;
+}
+
+.carousel2img {
+  max-width: 100%;
+}
+
+.start-section {
+  display: flex;
+  height: 724px;
+  padding: 100px 0 124px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  align-items: center;
+}
+.phone-img-div {
+  margin-left: auto;
+  margin-right: 20%;
+  align-self: baseline;
+}
+#phone-img {
+  max-width: initial;
+  width: 100%;
+}
+
+.footer {
+  background-color: #28323c;
+  height: 302px;
+  width: 100%;
+}
+
+.using-method-button {
+  background-color: #00b8ff;
+  border: 0px;
+  outline: 0px;
+  width: 168.22px;
+  height: 60px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 54px;
+}
+
+.using-method-button:hover {
+  background-color: rgba(0, 184, 255, 0.6);
+  transition: ease-in-out;
+  transition-duration: 0.3s;
+}
+
+.item {
+  transition: ease-out;
+  transition-duration: 0.5s;
+}
+
+.carousel1text {
+  font-size: 72px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 12%;
+  visibility: hidden;
+}
+
+.owl-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-service-startwithsocar {
+  margin-left: 20%;
+}
+
+/* 반응형 디자인 */
+
+@media (max-width: 769px) {
+  #logoimg {
+    width: 80px;
+    height: 56px;
+  }
+}
