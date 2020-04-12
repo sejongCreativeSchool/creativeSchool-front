@@ -70,7 +70,9 @@ Language: HTML5, CSS, JavaScript ES6
 - 원래 PC -> Mobile 순서로 디자인을 진행하려고 계획하고 PC버전 마크업을 다 한 뒤 인터넷을 뒤져보니 mobile first css라는 방식이 대세인 것 같아서 다음부터 모바일 먼저 마크업 한뒤, 피시를 마크업 해야겠다.   
 - CSS를 Naming할 때, 규칙을 정해야 겠다는 생각을 한다.   
 - 그냥 내 마음가는 대로 이름을 짓다보니, 나중에 내가 어떤 아이에게 어떤 이름을 주었는지 기억이 나지 않아 매번 찾아댕겼다.   
-- 검색해보니, CSS Naming Rule이 있었다. [BEM 방법론](https://webclub.tistory.com/263)
+- 검색해보니, CSS Naming Rule이 있었다. [BEM 방법론](https://webclub.tistory.com/263)   
+- 실제 개발 환경에서는 Component단위로 개발하니, CSS-in-JS에 대해 더 아는게 중요하다고 생각된다.   
+
 
 ##### Study Result
 
