@@ -2,7 +2,7 @@
 
 ### 학습내용
 #### CSS의 전반적인 이해   
-[생활코딩](https://www.inflearn.com/course/css-%EA%B8%B0%EB%B3%B8%EB%B6%80%ED%84%B0-%ED%99%9C%EC%9A%A9%EA%B9%8C%EC%A7%80/)을 학습하며 CSS에 대한 전반적인 이해를 하였다.   
+[생활코딩](https://www.inflearn.com/course/css-%EA%B8%B0%EB%B3%B8%EB%B6%80%ED%84%B0-%ED%99%9C%EC%9A%A9%EA%B9%8C%EC%A7%80/)을 학습하며 CSS에 대한 전반적인 이해를 하였다. = 
 ##### 선택자     
 HTML 태그를 선택하는 방법   
 - 태그 선택자 ( 태그 )   
