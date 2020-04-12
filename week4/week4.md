@@ -43,17 +43,34 @@ HTML 태그를 선택하는 방법
 
 [Flexbox로 만들 수 있는 10가지 레이아웃](https://d2.naver.com/helloworld/8540176)을 통해 공부   
 
+##### 반응형 디자인   
+웹사이트에 접속하는 기기의 크기에 따라 다른 형태의 웹사이트를 보여주는 것.   
+```css
+@media (max-width: 769px) {
+ /* 원하는 코드 */
+}
+```   
+이런 방식으로 사용한다.   
+요새는 Mobile First CSS 방식이 유행이라고 한다.   
 
+
+### Project   
+![socar result](https://user-images.githubusercontent.com/52201658/79069629-a6cfc280-7d0a-11ea-8e59-6fa963ecc76c.png)
 
 ##### Purpose
 똑같이 쏘카 페이지를 클로닝 하면서 CSS를 다루는 능력을 향상시키고자 했다.
 
 ##### TechSet
-Language: HTML5, CSS, JavaScript ES6, JQuery   
-Library: Owl Carousel(사용할 지 안할지 모름)
+Language: HTML5, CSS, JavaScript ES6
 
 ##### Comments
 - 거의 모든 정렬을 Flex로 진행한 것 같다.   
-- 이제 어느 정도의 정렬이 Flex로 가능하다. 하지만 이게 맞는 방식인지를 모르겠다.    
+- 이제 어느 정도의 정렬이 Flex로 가능하다. 하지만 이게 맞는 방식인지를 모르겠다.   
+- Carousel 기능을 순수 JavaScript로 직접 구현했다. 코드 리팩토링이 필요하다.   
+- 원래 PC -> Mobile 순서로 디자인을 진행하려고 계획하고 PC버전 마크업을 다 한 뒤 인터넷을 뒤져보니 mobile first css라는 방식이 대세인 것 같아서 다음부터 모바일 먼저 마크업 한뒤, 피시를 마크업 해야겠다.   
+- CSS를 Naming할 때, 규칙을 정해야 겠다는 생각을 한다.   
+- 그냥 내 마음가는 대로 이름을 짓다보니, 나중에 내가 어떤 아이에게 어떤 이름을 주었는지 기억이 나지 않아 매번 찾아댕겼다.   
+- 검색해보니, CSS Naming Rule이 있었다. [BEM 방법론](https://webclub.tistory.com/263)
+
 ##### Study Result
 
