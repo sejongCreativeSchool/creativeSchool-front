@@ -7,7 +7,8 @@ Week1 ~ Week4 까지의 내용을 전부 다시 복습했다.
 React Router에 대한 내용을 공부하면서 SPA의 라우팅에 대해서 이해하고, 바람직한 사용 방법이 무엇일지 고민했다.   
 
 ### Project   
-![week5](https://user-images.githubusercontent.com/52201658/79595276-842e1700-8119-11ea-84cf-d51168512643.png)   
+![screenshot](https://user-images.githubusercontent.com/52201658/79628646-c8530300-817d-11ea-8b89-0d161c53bcc8.png)
+
 
 ##### Purpose   
 세종대 맛집 리스트를 고도화 시키면서 지금까지 배웠던 내용을 총정리 하기 위해 만들었다.   
