@@ -13,6 +13,12 @@ Week1 ~ Week4 까지의 내용을 전부 다시 복습했다.
 #### React Router 공부   
 React Router에 대한 내용을 공부하면서 SPA의 라우팅에 대해서 이해하고, 바람직한 사용 방법이 무엇일지 고민했다.   
 
+#### 배포에 대한 공부   
+내가 만든 프로젝트를 공개하기 위해서는 프로젝트를 빌드하고, 배포하는 과정이 필요하다.   
+이에 대한 공부를 진행하였다.   
+[AWS S3 - React App 배포하기](https://youwaytogo.tistory.com/58)   
+[리액트 앱 AWS S3, CloudFront 에 배포하기](https://react-etc.vlpt.us/08.deploy-s3.html)
+
 ### Project   
 ![screenshot](https://user-images.githubusercontent.com/52201658/79628646-c8530300-817d-11ea-8b89-0d161c53bcc8.png)
 
