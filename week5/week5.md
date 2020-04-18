@@ -4,11 +4,11 @@
 #### 지금까지 한 내용의 전체적인 복습   
 Week1 ~ Week4 까지의 내용을 전부 다시 복습했다.  
 
-- React Hooks   
-- Redux   
-- Redux Middleware ( Redux Thunk )   
-- CSS   
-- Styled Components   
+- [React Hooks](https://react.vlpt.us/)   
+- [Redux](https://react.vlpt.us/redux/)   
+- [Redux Middleware ( Redux Thunk ) ](https://react.vlpt.us/redux-middleware/)  
+- [CSS](../week4/week4.md)   
+- [Styled Components](https://styled-components.com/)   
 
 #### React Router 공부   
 React Router에 대한 내용을 공부하면서 SPA의 라우팅에 대해서 이해하고, 바람직한 사용 방법이 무엇일지 고민했다.   
