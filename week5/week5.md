@@ -30,7 +30,11 @@ React Router에 대한 내용을 공부하면서 SPA의 라우팅에 대해서 �
 
 ##### TechSet
 Language: JavaScript ES6, JSX   
-Library: React, Redux, Styled-Component, React-Router, Semantic UI   
+Library: React, Redux, Styled-Component, React-Router, Semantic UI  
+
+##### issue   
+- 뒤로가기 누르면 음식 리스트가 이상하게 뜬다. ( 추후 수정 예정 )    
+
 
 ##### Comments   
 - 생각보다 까먹은 내용이 많았다는 사실에 놀랐다.   
