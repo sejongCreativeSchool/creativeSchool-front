@@ -29,6 +29,7 @@ React Router에 대한 내용을 공부하면서 SPA의 라우팅에 대해서 �
 
 ##### Purpose   
 세종대 맛집 리스트를 고도화 시키면서 지금까지 배웠던 내용을 총정리 하기 위해 만들었다.   
+데스크탑 뷰는 추후 완성 예정.   
 
 ##### TechSet
 Language: JavaScript ES6, JSX   
