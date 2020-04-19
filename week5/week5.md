@@ -45,5 +45,3 @@ Library: React, Redux, Styled-Component, React-Router, Semantic UI
 - 하지만, 이해 위주로 학습해와서 다시 Remind 시키기가 그렇게 어렵지 않았다.   
 
 
-##### Study Result
-
