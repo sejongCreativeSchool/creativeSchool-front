@@ -38,6 +38,8 @@ Library: React, Redux, Styled-Component, React-Router, Semantic UI
 
 ##### issue   
 - 뒤로가기 누르면 음식 리스트가 이상하게 뜬다. ( 추후 수정 예정 )    
+- 데스크탑 버전 미비( 추후 수정 예정 )
+- 랜더링 최적화 필요( 곧 수정 )
 
 
 ##### Comments   
