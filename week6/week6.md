@@ -45,7 +45,7 @@ FLUX 패턴의 장점 : 데이터가 단방향으로 흘러 데이터의 변화�
 ### 나는 이런 장점 때문에, 프로젝트를 FLUX 패턴으로 설계하기로 마음먹었다.   
 
 ### TechSet   
-Language: TypeScript   
+Language: TypeScript (JavaScript 대신에 사용 )       
 Library: React, Redux, Redux-Thunk, Styled-Component, React-Router, Axios, Immutable.js
 
 ### Project Directory Structure   
