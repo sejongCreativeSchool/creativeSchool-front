@@ -40,3 +40,5 @@ Flux 아키텍처의 가장 큰 특징으로는 '단방향 데이터 흐름(unid
 <img width="755" alt="flux" src="https://user-images.githubusercontent.com/52201658/80010468-6e4b9800-8505-11ea-9a03-e25719192a97.png">
 
 FLUX 패턴의 장점 : 데이터가 단방향으로 흘러 데이터의 변화를 예측하기 쉽다.   
+
+### 나는 이런 장점 때문에, 프로젝트를 FLUX 패턴으로 설계하기로 마음먹었다.   
