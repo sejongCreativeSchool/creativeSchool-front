@@ -1,8 +1,9 @@
 # 창의학기제 웹 프론트엔드(6주차)
 
-### [Admin Page Architecture](./architecture/admin/adminArchitecture.md)
-### [Landing Page Architecture](./architecture/landing/landingArchitecture.md)
-### [Notification Page Architecture](./architecture/notification/notificationArchitecture.md)
+### 결과물   
+#### [Admin Page Architecture](./architecture/admin/adminArchitecture.md)
+#### [Landing Page Architecture](./architecture/landing/landingArchitecture.md)
+#### [Notification Page Architecture](./architecture/notification/notificationArchitecture.md)
 
 ### 디자인 패턴 선택     
 어떤 패턴으로 설계할까 고민을 많이 했다.   
