@@ -33,9 +33,10 @@ FLUX 애플리케이션은 크게 세 부분으로 구성된다.
 - 뷰(View)   
 <br/>
 단, 여기서 말하는 뷰는 MVC의 뷰와는 달리 스토어에서 데이터를 가져오는 한편 데이터를 자식 뷰로 전달하기도 하는 일종의 뷰-컨트롤러로 보아야 한다.  
-
-Flux 아키텍처의 가장 큰 특징으로는 '단방향 데이터 흐름(unidirectional data flow)'을 들 수 있다.    
 <br/>
+Flux 아키텍처의 가장 큰 특징으로는 '단방향 데이터 흐름(unidirectional data flow)'을 들 수 있다.       
 데이터의 흐름은 언제나 디스패처(Dispatcher)에서 스토어(Store)로, 스토어에서 뷰(View)로, 뷰에서 액션(Action)으로 다시 액션에서 디스패처로 흐른다.  
 
 <img width="755" alt="flux" src="https://user-images.githubusercontent.com/52201658/80010468-6e4b9800-8505-11ea-9a03-e25719192a97.png">
+
+FLUX 패턴의 장점 : 데이터가 단방향으로 흘러 데이터의 변화를 예측하기 쉽다.   
