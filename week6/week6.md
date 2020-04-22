@@ -53,12 +53,6 @@ FLUX 패턴의 장점 : 데이터가 단방향으로 흘러 데이터의 변화�
 Language: TypeScript (JavaScript 대신에 사용 )       
 Library: React, Redux, Redux-Thunk, Styled-Component, React-Router, Axios, Immutable.js
 
-### Project Directory Structure   
-components: 컴포넌트 파일들이 위치하는 폴더   
-containers: 컨테이너 파일들이 위치하는 폴더, 주로 state를 props로 매핑하는 코드들이 위치   
-pages: Routing을 위한 페이지 파일들이 위치하는 폴더   
-modules: redux 작업을 위한 폴더    
-lib : api 호출을 위한 코드를 모아두는 곳   
 
 ##### 참고 자료
 [Flux와 Redux](https://taegon.kim/archives/5288)
