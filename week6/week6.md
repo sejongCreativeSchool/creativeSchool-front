@@ -54,3 +54,5 @@ pages: Routing을 위한 페이지 파일들이 위치하는 폴더
 modules: redux 작업을 위한 폴더    
 lib : api 호출을 위한 코드를 모아두는 곳   
 
+##### 참고 자료
+[Flux와 Redux](https://taegon.kim/archives/5288)
