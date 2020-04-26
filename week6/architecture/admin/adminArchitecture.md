@@ -8,5 +8,6 @@
 - lib : api 호출을 위한 코드를 모아두는 폴더.   
 
 ### Detail Directory Structure  
-#### components   
+![admin_directory_tree](https://user-images.githubusercontent.com/52201658/80302147-400ad880-87e3-11ea-861b-8a01a7a02c6d.png)
+
 
