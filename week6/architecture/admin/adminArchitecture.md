@@ -7,3 +7,6 @@
 - modules: redux 작업을 위한 폴더.    
 - lib : api 호출을 위한 코드를 모아두는 폴더.   
 
+### Detail Directory Structure  
+#### components   
+
