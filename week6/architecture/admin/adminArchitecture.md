@@ -10,4 +10,15 @@
 ### Detail Directory Structure  
 ![admin_directory_tree](https://user-images.githubusercontent.com/52201658/80302147-400ad880-87e3-11ea-861b-8a01a7a02c6d.png)
 
+### Path Organization   
+
+#### /    
+오버뷰 페이지    
+#### /users   
+유저 관리 페이지    
+#### /errands   
+심부름 관리 페이지    
+#### /login   
+관리자 로그인 페이지    
+
 
