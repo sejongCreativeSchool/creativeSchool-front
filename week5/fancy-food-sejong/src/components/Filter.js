@@ -20,6 +20,7 @@ const RadioListStyle = styled.div`
 `;
 
 function Filter({
+  stateOfCategory,
   onToggleKorean,
   onToggleJapanese,
   onToggleChinese,
@@ -27,38 +28,60 @@ function Filter({
   onToggleCafe,
   onToggleAlcohol,
 }) {
+  const { korean, japanese, chinese, western, cafe, alcohol } = stateOfCategory;
+
   return (
     <RadioListStyle>
       <div className="firstLine">
         <div>
           <h4>한식</h4>
-          <Radio slider onChange={onToggleKorean} />
+          <Radio
+            slider
+            onChange={onToggleKorean}
+            checked={korean ? true : false}
+          />
         </div>
 
         <div>
           <h4>중식</h4>
-          <Radio slider onChange={onToggleChinese} />
+          <Radio
+            slider
+            onChange={onToggleChinese}
+            checked={chinese ? true : false}
+          />
         </div>
 
         <div>
           <h4>일식</h4>
-          <Radio slider onChange={onToggleJapanese} />
+          <Radio
+            slider
+            onChange={onToggleJapanese}
+            checked={japanese ? true : false}
+          />
         </div>
       </div>
       <div className="secondLine">
         <div>
           <h4>양식</h4>
-          <Radio slider onChange={onToggleWestern} />
+          <Radio
+            slider
+            onChange={onToggleWestern}
+            checked={western ? true : false}
+          />
         </div>
 
         <div>
           <h4>술집</h4>
-          <Radio slider onChange={onToggleAlcohol} />
+          <Radio
+            slider
+            onChange={onToggleAlcohol}
+            checked={alcohol ? true : false}
+          />
         </div>
 
         <div>
           <h4>카페</h4>
-          <Radio slider onChange={onToggleCafe} />
+          <Radio slider onChange={onToggleCafe} checked={cafe ? true : false} />
         </div>
       </div>
     </RadioListStyle>

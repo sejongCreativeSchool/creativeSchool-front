@@ -9,7 +9,7 @@ const HeaderStyle = styled.div`
   background-color: rgb(195, 0, 47);
   width: 100%;
 
-  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 
   .headerLeft {
     display: flex;
@@ -40,10 +40,6 @@ function Header() {
         <Icon name="food" size="big" className="icon" />
         <div className="logoText">세종맛집</div>
       </div>
-
-      {/* <div className="headerRight" onClick={consoleA}>
-        <Icon name="bars" size="big" className="icon" />
-  </div>*/}
     </HeaderStyle>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   toggleKorean,
   toggleJapanese,
@@ -11,6 +11,7 @@ import {
 import Filter from "../components/Filter";
 
 function FilterContainer() {
+  const stateOfCategory = useSelector((state) => state.filter);
   const dispatch = useDispatch();
 
   const onToggleKorean = () => dispatch(toggleKorean());
@@ -23,6 +24,7 @@ function FilterContainer() {
   return (
     <div>
       <Filter
+        stateOfCategory={stateOfCategory}
         onToggleKorean={onToggleKorean}
         onToggleJapanese={onToggleJapanese}
         onToggleChinese={onToggleChinese}
