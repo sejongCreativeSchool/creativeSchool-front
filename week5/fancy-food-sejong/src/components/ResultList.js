@@ -33,6 +33,7 @@ const chooseIcon = (item) => {
 };
 
 const ResultListStyle = styled.div`
+  flex: 1;
   .item {
     padding: 5% 5%;
     border-bottom: 1px solid #dbdbdb;

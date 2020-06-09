@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { fancyRestaurants } from "../restaurantInfo/restaurantInfo";
-import { Link } from "react-router-dom";
-import { Icon } from "semantic-ui-react";
+
 const { kakao, innerHeight } = window;
 
 const mapStyle = {
@@ -60,6 +59,10 @@ function KakaoMap({ id }) {
 
       infowindow.open(map);
     });
+
+    return () => {
+      console.log(kakao.maps);
+    };
   }, [id]);
 
   return (

@@ -139,3 +139,7 @@ export const fancyRestaurants = [
     description: "음악이랑 분위기가 상당함. 대규모 모단 소규모로 가길 추천.",
   },
 ];
+
+let fiveMinJS = [];
+
+fiveMinJS[0] = 1;

@@ -1,0 +1,11 @@
+.editor {
+  height: 500px !important;
+  border: 1px solid #ccc !important;
+  padding: 5px !important;
+  border-radius: 2px !important;
+  color: black;
+}
+
+.toolbar {
+  color: black;
+}

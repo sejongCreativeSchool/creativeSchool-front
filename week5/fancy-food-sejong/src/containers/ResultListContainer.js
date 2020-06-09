@@ -5,7 +5,6 @@ import { setCenterPosition } from "../modules/centerposition";
 
 function ResultListContainer() {
   const filterState = useSelector((state) => state.filter);
-  const { id } = useSelector((state) => state.centerposition);
 
   const dispatch = useDispatch();
 
