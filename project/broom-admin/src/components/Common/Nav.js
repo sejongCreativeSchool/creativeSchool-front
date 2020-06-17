@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import LogoutButtonContainer from "../../containers/Login/LogoutButtonContainer";
 
 const NavDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   z-index: 2;
   position: fixed;
   width: 200px;
@@ -70,6 +75,8 @@ function Nav() {
           </NavLink>
         </ul>
       </div>
+
+      <LogoutButtonContainer />
     </NavDiv>
   );
 }

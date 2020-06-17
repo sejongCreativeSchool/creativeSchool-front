@@ -77,3 +77,26 @@ export const getUserById = (accessToken) => {
 export const deleteUserById = (id) => {
   return axios.delete(`${userBaseUrl}/${id}`);
 };
+
+let loginBaseURL = "http://booreum.com:3001/v1/auth";
+
+export const postLogin = (id, password) => {
+  return axios({
+    method: "post",
+    url: `${loginBaseURL}/login`,
+    data: {
+      user_id: id,
+      user_pw: password,
+    },
+  });
+};
+
+export const checkAuth = () => {
+  return axios({
+    method: "get",
+    url: `${loginBaseURL}/check`,
+    headers: {
+      "x-access-token": localStorage.token,
+    },
+  });
+};

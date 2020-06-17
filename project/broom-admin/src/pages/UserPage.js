@@ -4,6 +4,7 @@ import PageTemplate from "../components/Common/PageTemplate";
 import UserTable from "../components/user/UserTable";
 import UserSearchContainer from "../containers/user/UserSearchContainer";
 import UserTableContainer from "../containers/user/UserTableContainer";
+import HeaderAndNavPage from "./HeaderAndNavPage";
 
 const Headerstyle = styled.h3`
   font-family: "S-CoreDream-6Bold";
@@ -13,12 +14,15 @@ const Headerstyle = styled.h3`
 
 function UserPage() {
   return (
-    <PageTemplate>
-      <Headerstyle>| 회원 관리</Headerstyle>
-      <UserSearchContainer />
+    <>
+      <HeaderAndNavPage />
+      <PageTemplate>
+        <Headerstyle>| 회원 관리</Headerstyle>
+        <UserSearchContainer />
 
-      <UserTableContainer />
-    </PageTemplate>
+        <UserTableContainer />
+      </PageTemplate>
+    </>
   );
 }
 

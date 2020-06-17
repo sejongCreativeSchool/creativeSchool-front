@@ -9,7 +9,7 @@ html {
   height:100%;
 }
 body {
-  background: #f37274;
+  background-color: #0105ac;
   height:100%;
   display:flex;
   justify-content:center;
@@ -17,13 +17,13 @@ body {
 }
 `;
 
-function LoginPage() {
+function LoginPage({ history }) {
   return (
     <>
       <GlobalStyle />
       <LoginTemplate>
         <BroomLogo />
-        <LoginInputContainer />
+        <LoginInputContainer history={history} />
       </LoginTemplate>
     </>
   );

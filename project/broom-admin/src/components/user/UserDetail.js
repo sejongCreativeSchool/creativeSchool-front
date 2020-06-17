@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PageTemplate from "../Common/PageTemplate";
 import { changeDataFormat } from "../../lib/changeDataFormat";
+import HeaderAndNavPage from "../../pages/HeaderAndNavPage";
 
 const Headerstyle = styled.h3`
   font-family: "S-CoreDream-6Bold";
@@ -72,77 +73,80 @@ const DelteBtnWrapper = styled.div`
 const UserProfileBlock = styled.div``;
 function UserDetail({ user, history, deleteById }) {
   return (
-    <PageTemplate>
-      <div>
-        <Headerstyle>| 회원 관리</Headerstyle>
+    <>
+      <HeaderAndNavPage />
+      <PageTemplate>
         <div>
-          <UserImageBlock>
-            <img
-              src="https://readyrefrigeration.ca/sites/default/files/styles/headshot/adaptive-image/public/nobody.jpg"
-              alt="placeholder"
-            />
-          </UserImageBlock>
-          <UserProfileBlock>
-            <ListStyle>
-              <ItemStyle>
-                <div className="item-title">{`이름 `}</div>
-                <div>{user.name}</div>
-              </ItemStyle>
-              <hr />
+          <Headerstyle>| 회원 관리</Headerstyle>
+          <div>
+            <UserImageBlock>
+              <img
+                src="https://readyrefrigeration.ca/sites/default/files/styles/headshot/adaptive-image/public/nobody.jpg"
+                alt="placeholder"
+              />
+            </UserImageBlock>
+            <UserProfileBlock>
+              <ListStyle>
+                <ItemStyle>
+                  <div className="item-title">{`이름 `}</div>
+                  <div>{user.name}</div>
+                </ItemStyle>
+                <hr />
 
-              <ItemStyle>
-                <div className="item-title">{`학과 `}</div>
-                <div>{user.department ? user.department : "미입력"}</div>
-              </ItemStyle>
-              <hr />
+                <ItemStyle>
+                  <div className="item-title">{`학과 `}</div>
+                  <div>{user.department ? user.department : "미입력"}</div>
+                </ItemStyle>
+                <hr />
 
-              <ItemStyle>
-                <div className="item-title">{`연락처`}</div>
-                <div>{user.phone ? user.phone : "미입력"}</div>
-              </ItemStyle>
-              <hr />
+                <ItemStyle>
+                  <div className="item-title">{`연락처`}</div>
+                  <div>{user.phone ? user.phone : "미입력"}</div>
+                </ItemStyle>
+                <hr />
 
-              <ItemStyle>
-                <div className="item-title">{`헬퍼 여부`}</div>
-                <div>{user.helper ? "O" : "X"}</div>
-              </ItemStyle>
-              <hr />
+                <ItemStyle>
+                  <div className="item-title">{`헬퍼 여부`}</div>
+                  <div>{user.helper ? "O" : "X"}</div>
+                </ItemStyle>
+                <hr />
 
-              <ItemStyle>
-                <div className="item-title">{`가입 날짜 `}</div>
-                <div>{`${changeDataFormat(user.createdAt)[0]} ${
-                  changeDataFormat(user.createdAt)[1]
-                } `}</div>
-              </ItemStyle>
-              <hr />
+                <ItemStyle>
+                  <div className="item-title">{`가입 날짜 `}</div>
+                  <div>{`${changeDataFormat(user.createdAt)[0]} ${
+                    changeDataFormat(user.createdAt)[1]
+                  } `}</div>
+                </ItemStyle>
+                <hr />
 
-              <ItemStyle>
-                <div className="item-title">{`업데이트 날짜 `}</div>
-                <div>{`${changeDataFormat(user.updatedAt)[0]} ${
-                  changeDataFormat(user.updatedAt)[1]
-                } `}</div>
-              </ItemStyle>
-              <hr />
+                <ItemStyle>
+                  <div className="item-title">{`업데이트 날짜 `}</div>
+                  <div>{`${changeDataFormat(user.updatedAt)[0]} ${
+                    changeDataFormat(user.updatedAt)[1]
+                  } `}</div>
+                </ItemStyle>
+                <hr />
 
-              <DelteBtnWrapper>
-                <div
-                  className="deleteBtn"
-                  onClick={async () => {
-                    if (window.confirm("정말 유저를 삭제하시겠습니까?")) {
-                      await deleteById(user.accessToken);
-                      await alert("삭제가 완료 되었습니다,");
-                      await history.goBack();
-                    }
-                  }}
-                >
-                  유저 삭제
-                </div>
-              </DelteBtnWrapper>
-            </ListStyle>
-          </UserProfileBlock>
+                <DelteBtnWrapper>
+                  <div
+                    className="deleteBtn"
+                    onClick={async () => {
+                      if (window.confirm("정말 유저를 삭제하시겠습니까?")) {
+                        await deleteById(user.accessToken);
+                        await alert("삭제가 완료 되었습니다,");
+                        await history.goBack();
+                      }
+                    }}
+                  >
+                    유저 삭제
+                  </div>
+                </DelteBtnWrapper>
+              </ListStyle>
+            </UserProfileBlock>
+          </div>
         </div>
-      </div>
-    </PageTemplate>
+      </PageTemplate>
+    </>
   );
 }
 

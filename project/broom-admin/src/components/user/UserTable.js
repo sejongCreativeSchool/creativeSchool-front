@@ -20,21 +20,25 @@ function UserTable({ users, inputvalue }) {
           {users &&
             users
               .filter((user) => user.name.indexOf(inputvalue) > -1)
-              .map((user) => (
-                <Table.Row>
-                  <Table.Cell>{user.name}</Table.Cell>
-                  <Table.Cell>
-                    {user.department ? user.department : "미입력"}
-                  </Table.Cell>
-                  <Table.Cell>{user.phone ? user.phone : "미입력"}</Table.Cell>
-                  <Table.Cell>{user.helper ? "O" : "X"}</Table.Cell>
-                  <Table.Cell>
-                    <Link to={`/user/${user.accessToken}`} exact>
-                      <Button>관리</Button>
-                    </Link>
-                  </Table.Cell>
-                </Table.Row>
-              ))}
+              .map((user) =>
+                user.name !== "admin" ? (
+                  <Table.Row>
+                    <Table.Cell>{user.name}</Table.Cell>
+                    <Table.Cell>
+                      {user.department ? user.department : "미입력"}
+                    </Table.Cell>
+                    <Table.Cell>
+                      {user.phone ? user.phone : "미입력"}
+                    </Table.Cell>
+                    <Table.Cell>{user.helper ? "O" : "X"}</Table.Cell>
+                    <Table.Cell>
+                      <Link to={`/user/${user.accessToken}`} exact>
+                        <Button>관리</Button>
+                      </Link>
+                    </Table.Cell>
+                  </Table.Row>
+                ) : null
+              )}
         </Table.Body>
       </Table>
     </div>

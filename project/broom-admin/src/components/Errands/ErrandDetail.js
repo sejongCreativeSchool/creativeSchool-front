@@ -3,6 +3,7 @@ import PageTemplate from "../Common/PageTemplate";
 import styled from "styled-components";
 import { changeDataFormat } from "../../lib/changeDataFormat";
 import { Button, Modal } from "semantic-ui-react";
+import HeaderAndNavPage from "../../pages/HeaderAndNavPage";
 
 const Headerstyle = styled.h3`
   font-family: "S-CoreDream-6Bold";
@@ -69,6 +70,7 @@ const DelteBtnWrapper = styled.div`
 function ErrandDetail({ errand, deleteById, history }) {
   return (
     <>
+      <HeaderAndNavPage />
       <PageTemplate>
         <Headerstyle>| 심부름 관리</Headerstyle>
         <ListStyle>

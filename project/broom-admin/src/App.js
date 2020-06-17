@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Header from "./components/Common/Header";
 import LoginPage from "./pages/LoginPage";
@@ -16,6 +16,8 @@ import NoticeViewerContainer from "./containers/notice/NoticeViewerContainer";
 import NoticeViewerPage from "./pages/NoticeViewerPage";
 import NoticeFixContainer from "./containers/notice/NoticeFixContainer";
 import NoticeFixPage from "./pages/NoticeFixPage";
+import HeaderAndNavPage from "./pages/HeaderAndNavPage";
+import ErrandPageContainer from "./containers/errands/ErrandPageContainer";
 
 const GlobalStyle = createGlobalStyle`
 @font-face { 
@@ -35,22 +37,22 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <Nav />
-      <Route path="/errands" component={ErrandsPage} exact />
+
+      <Route path="/login" component={LoginPage} exact />
+
+      <Route path="/" component={ErrandPageContainer} exact />
+      <Route path="/errands" component={ErrandPageContainer} exact />
       <Route
         path="/errands/:id"
         component={ErrandDetailContainer}
         exact={false}
       />
-
       <Route path="/users" component={UserPage} exact />
       <Route
         path="/user/:accessToken"
         component={UserDetailContainer}
         exact={false}
       />
-
       <Route path="/notice" component={NoticePage} exact />
       <Route path="/notice/edit/:id" component={NoticeFixPage} exact />
       <Route path="/notice/write" component={NoticeWritePage} exact />

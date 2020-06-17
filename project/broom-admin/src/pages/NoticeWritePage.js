@@ -4,6 +4,7 @@ import PageTemplate from "../components/Common/PageTemplate";
 import styled from "styled-components";
 
 import WritingNoticeContainer from "../containers/notice/WritingNoticeContainer";
+import HeaderAndNavPage from "./HeaderAndNavPage";
 
 const Headerstyle = styled.h3`
   font-family: "S-CoreDream-6Bold";
@@ -13,10 +14,13 @@ const Headerstyle = styled.h3`
 
 function NoticeWritePage({ match, history }) {
   return (
-    <PageTemplate>
-      <Headerstyle>| 공지 작성</Headerstyle>
-      <WritingNoticeContainer match={match} history={history} />
-    </PageTemplate>
+    <>
+      <HeaderAndNavPage />
+      <PageTemplate>
+        <Headerstyle>| 공지 작성</Headerstyle>
+        <WritingNoticeContainer match={match} history={history} />
+      </PageTemplate>
+    </>
   );
 }
 

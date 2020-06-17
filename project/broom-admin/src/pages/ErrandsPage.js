@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PageTemplate from "../components/Common/PageTemplate";
 import ErrandTableContainer from "../containers/errands/ErrandTableContainer";
 import ErrandFilterContainer from "../containers/errands/ErrandFilterContainer";
+import HeaderAndNavPage from "./HeaderAndNavPage";
 
 const Headerstyle = styled.h3`
   font-family: "S-CoreDream-6Bold";
@@ -10,13 +11,16 @@ const Headerstyle = styled.h3`
   margin-bottom: 15px;
 `;
 
-function ErrandsPage() {
+function ErrandsPage({ history }) {
   return (
-    <PageTemplate>
-      <Headerstyle>| 심부름 관리</Headerstyle>
-      <ErrandFilterContainer />
-      <ErrandTableContainer />
-    </PageTemplate>
+    <>
+      <HeaderAndNavPage />
+      <PageTemplate>
+        <Headerstyle>| 심부름 관리</Headerstyle>
+        <ErrandFilterContainer />
+        <ErrandTableContainer />
+      </PageTemplate>
+    </>
   );
 }
 

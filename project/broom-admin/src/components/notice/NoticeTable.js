@@ -11,7 +11,6 @@ function NoticeTable({ notices }) {
           <Table.Row>
             <Table.HeaderCell>제목</Table.HeaderCell>
             <Table.HeaderCell>날짜</Table.HeaderCell>
-            <Table.HeaderCell>조회</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
@@ -29,7 +28,6 @@ function NoticeTable({ notices }) {
                 </Table.Cell>
 
                 <Table.Cell>{changeDataFormat(notice.updateAt)[0]}</Table.Cell>
-                <Table.Cell>123</Table.Cell>
               </Table.Row>
             ))}
         </Table.Body>
