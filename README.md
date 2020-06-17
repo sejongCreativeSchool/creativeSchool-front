@@ -4,6 +4,9 @@
 
 ### [학교에서 심부름이 필요할 때, 부름]
 
+### [결과물 :: 랜딩페이지](https://www.naver.com)
+### [결과물 :: 관리자페이지](https://www.naver.com)
+
 ### Web Front Study
 
 #### [Week 1 :: React - Redux를 이용한 학점 계산기 만들기](./week1/week1.md)
