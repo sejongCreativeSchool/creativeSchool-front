@@ -1,6 +1,6 @@
 # 창의학기제 프로젝트 - [ 부름 ]
 
-![로고](https://user-images.githubusercontent.com/52201658/84942585-089f1500-b11e-11ea-8785-efe4692daa76.png)
+<img src="https://user-images.githubusercontent.com/52201658/84942585-089f1500-b11e-11ea-8785-efe4692daa76.png" alt="logo" width="150px">
 
 ### Web Front Study
 
