@@ -2,6 +2,8 @@
 
 <img src="https://user-images.githubusercontent.com/52201658/84942585-089f1500-b11e-11ea-8785-efe4692daa76.png" alt="logo" width="150px">
 
+### [학교에서 심부름이 필요할 때, 부름]
+
 ### Web Front Study
 
 #### [Week 1 :: React - Redux를 이용한 학점 계산기 만들기](./week1/week1.md)
