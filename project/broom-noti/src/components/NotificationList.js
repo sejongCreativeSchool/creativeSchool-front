@@ -41,7 +41,7 @@ function NotificationList({ notices }) {
     <div>
       {notices &&
         notices.map((notice) => (
-          <Link to={`/${notice._id}`}>
+          <Link to={`/noti/${notice._id}`}>
             <NotificationItem title={notice.title} />
           </Link>
         ))}
