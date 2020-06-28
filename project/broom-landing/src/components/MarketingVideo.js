@@ -19,7 +19,7 @@ function MarketingVideo() {
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/xqFvYsy4wE4"
+          src="https://youtu.be/n8RSuWc3B_8"
           allow="autoplay = 1;"
           title="marketing-video"
         />

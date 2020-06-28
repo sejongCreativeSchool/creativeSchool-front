@@ -1,11 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
+import styled from "styled-components";
 import { Table, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
+const TableWrapper = styled.div`
+  padding-bottom: 20px;
+`;
+
 function UserTable({ users, inputvalue }) {
   return (
-    <div>
-      <Table basic="very" style={{ marginBottom: "20px" }}>
+    <TableWrapper>
+      <Table basic="very">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>이름</Table.HeaderCell>
@@ -24,13 +29,17 @@ function UserTable({ users, inputvalue }) {
                 user.name !== "admin" ? (
                   <Table.Row>
                     <Table.Cell>{user.name}</Table.Cell>
+
                     <Table.Cell>
                       {user.department ? user.department : "미입력"}
                     </Table.Cell>
+
                     <Table.Cell>
                       {user.phone ? user.phone : "미입력"}
                     </Table.Cell>
+
                     <Table.Cell>{user.helper ? "O" : "X"}</Table.Cell>
+
                     <Table.Cell>
                       <Link to={`/user/${user.accessToken}`} exact>
                         <Button>관리</Button>
@@ -41,7 +50,7 @@ function UserTable({ users, inputvalue }) {
               )}
         </Table.Body>
       </Table>
-    </div>
+    </TableWrapper>
   );
 }
 

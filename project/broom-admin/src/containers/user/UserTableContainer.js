@@ -5,20 +5,19 @@ import UserTable from "../../components/user/UserTable";
 import Loader from "../../components/Common/Loader";
 
 function UserTableContainer() {
+  const { value } = useSelector((state) => state.usersearch);
   const { users_loading, users, users_error } = useSelector(
     (state) => state.usertable
   );
-
-  const { value } = useSelector((state) => state.usersearch);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getUsersRequest());
-  }, []);
+  }, [dispatch]);
 
   if (users_error) {
-    return <div>에러 났습니다</div>;
+    return <div>에러가 발생했습니다. 다시 시도해 주세요.</div>;
   }
 
   if (users_loading) {

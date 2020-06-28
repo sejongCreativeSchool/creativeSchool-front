@@ -5,9 +5,10 @@ import { changeDataFormat } from "../../lib/changeDataFormat";
 import HeaderAndNavPage from "../../pages/HeaderAndNavPage";
 
 const Headerstyle = styled.h3`
+  margin-bottom: 15px;
+
   font-family: "S-CoreDream-6Bold";
   font-size: 2rem;
-  margin-bottom: 15px;
 `;
 
 const UserImageBlock = styled.div`
@@ -19,25 +20,31 @@ const ListStyle = styled.div`
 `;
 
 const ItemStyle = styled.div`
-  padding: 10px;
   display: flex;
+
+  padding: 10px;
+
   text-align: center;
 
   .item-title {
+    margin-right: 10px;
+
+    text-align: center;
+
     font-weight: bold;
     font-size: 1.5rem;
-    margin-right: 10px;
-    text-align: center;
   }
 
   .deleteBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 100px;
     height: 30px;
+
     border: 1px solid #cccccc;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .deleteBtn:hover {
@@ -48,21 +55,25 @@ const ItemStyle = styled.div`
 const DelteBtnWrapper = styled.div`
   display: flex;
   justify-content: center;
+
+  margin-top: 30px;
+
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
 
-  margin-top: 30px;
-
   .deleteBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 150px;
     height: 40px;
+
     border: 1px solid #cccccc;
-    background-color: rgb(255, 0, 0);
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    background-color: rgb(255, 0, 0);
   }
 
   .deleteBtn:hover {

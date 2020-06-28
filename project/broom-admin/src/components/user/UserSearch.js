@@ -1,9 +1,14 @@
 import React from "react";
+import styled from "styled-components";
 import { Input, Icon } from "semantic-ui-react";
+
+const UserSearchWrapper = styled.div`
+  margin-bottom: 30px;
+`;
 
 function UserSearch({ value, onChange }) {
   return (
-    <div style={{ marginBottom: "30px" }}>
+    <UserSearchWrapper>
       <Input
         icon
         placeholder="회원 이름 검색"
@@ -14,7 +19,7 @@ function UserSearch({ value, onChange }) {
         <input />
         <Icon name="search" />
       </Input>
-    </div>
+    </UserSearchWrapper>
   );
 }
 
