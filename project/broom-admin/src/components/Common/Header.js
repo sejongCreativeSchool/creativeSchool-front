@@ -4,47 +4,64 @@ import broomlogo from "../../res/broomlogo.svg";
 import { useHistory } from "react-router-dom";
 
 const HeaderStyle = styled.div`
-  width: 100vw;
-  height: 60px;
+  display: flex;
+  align-items: center;
+
   position: fixed;
   z-index: 3;
+
+  width: 100vw;
+  height: 60px;
+
+  padding-left: 30px;
+
   box-shadow: 1px 1px 1px 1px lightgray;
   background-color: white;
 
-  font-family: "S-CoreDream-6Bold";
-  font-size: 1.5rem;
+  user-select: none;
+  cursor: pointer;
+`;
 
+const LogoImgWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 30px;
 
-  .logo-wrapper {
-    display: flex;
-    align-items: center;
-    height: 60px;
+  height: 60px;
 
-    margin-right: 10px;
-  }
+  margin-right: 10px;
 
   img {
+    display: block;
     height: 50px;
   }
+`;
 
-  user-select: none;
+const LogoTextWrapper = styled.div`
+  display: flex;
+  align-content: center;
+`;
+
+const LogoText = styled.h1`
+  font-family: "S-CoreDream-6Bold";
+  font-size: 1.5rem;
 `;
 
 function Header() {
   let history = useHistory();
+
   return (
     <HeaderStyle
       onClick={() => {
         history.push("/");
       }}
     >
-      <div className="logo-wrapper">
-        <img src={broomlogo} alt="logo" />
-      </div>
-      <div>부름 관리자 페이지</div>
+      <LogoImgWrapper>
+        <img src={broomlogo} alt="broom_logo" />
+      </LogoImgWrapper>
+
+      <LogoTextWrapper>
+        <LogoText>부름 관리자 페이지</LogoText>
+      </LogoTextWrapper>
     </HeaderStyle>
   );
 }
