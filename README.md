@@ -5,7 +5,7 @@
 ### [학교에서 심부름이 필요할 때, 부름]
 
 ### [결과물 :: 랜딩페이지](http://www.booreum.com:3000/)
-### [결과물 :: 관리자페이지](https://www.naver.com)
+### [결과물 :: 관리자페이지](http://www.booreum.com:8080/)
 
 ### Web Front Study
 
