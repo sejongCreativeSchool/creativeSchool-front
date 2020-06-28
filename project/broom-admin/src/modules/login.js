@@ -34,7 +34,6 @@ export const postLoginRequest = (id, password) => async (dispatch) => {
       dispatch({ type: LOGIN_FAILURE, res_error: "error" });
     } else {
       localStorage.token = res.data.data.token;
-      console.log(localStorage.token);
       dispatch({ type: LOGIN_SUCCESS }); // 성공
     }
   } catch (e) {
@@ -47,6 +46,7 @@ export const checkAuthRequest = () => async (dispatch) => {
   dispatch({ type: GET_ME }); //요청 시작
   try {
     const res = await api.checkAuth();
+    console.log(res.data.data.user_id);
     dispatch({ type: GET_ME_SUCCESS, check: res.data.data.user_id });
   } catch (e) {
     dispatch({ type: GET_ME_FAILURE, check_error: e });
@@ -66,8 +66,9 @@ const initialState = {
   login_error: "",
 
   check: null,
-  check_loading: false,
+  check_loading: "before_loading",
   check_error: null,
+  check_success: false,
 };
 
 export default function login(state = initialState, action) {
@@ -109,7 +110,7 @@ export default function login(state = initialState, action) {
     case GET_ME:
       return {
         ...state,
-        check_loading: true,
+        check_loading: "loading",
       };
 
     case GET_ME_SUCCESS:
@@ -117,6 +118,8 @@ export default function login(state = initialState, action) {
         ...state,
         check_loading: false,
         check: action.check,
+        check_success: true,
+        login: true,
       };
 
     case GET_ME_FAILURE:
@@ -124,6 +127,7 @@ export default function login(state = initialState, action) {
         ...state,
         check_loading: false,
         check_error: action.res_error,
+        login: false,
       };
 
     case LOGOUT:

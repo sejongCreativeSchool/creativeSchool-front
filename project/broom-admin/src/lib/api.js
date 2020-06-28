@@ -92,6 +92,7 @@ export const postLogin = (id, password) => {
 };
 
 export const checkAuth = () => {
+  console.log(localStorage.token);
   return axios({
     method: "get",
     url: `${loginBaseURL}/check`,

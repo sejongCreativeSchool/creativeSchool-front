@@ -17,6 +17,8 @@ const FilterStyle = styled.div`
     display: flex;
     list-style: none;
     padding-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   margin-bottom: 30px;
