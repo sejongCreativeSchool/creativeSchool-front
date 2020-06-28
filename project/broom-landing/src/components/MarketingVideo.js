@@ -10,6 +10,10 @@ const VideoContainer = styled.div`
 const IframeWrapper = styled.div`
   width: 100%;
   height: 50vh;
+
+  .iframe {
+    border: 0px;
+  }
 `;
 
 function MarketingVideo() {
@@ -19,10 +23,12 @@ function MarketingVideo() {
         <iframe
           width="100%"
           height="100%"
-          src="https://youtu.be/n8RSuWc3B_8"
-          allow="autoplay = 1;"
-          title="marketing-video"
-        />
+          src="https://www.youtube.com/embed/n8RSuWc3B_8"
+          allow="accelerometer; autoplay;"
+          allowfullscreen
+          title="broom_video"
+          className="iframe"
+        ></iframe>
       </IframeWrapper>
     </VideoContainer>
   );
